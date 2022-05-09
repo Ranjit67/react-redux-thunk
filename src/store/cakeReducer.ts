@@ -11,8 +11,6 @@ const counterReducer = (
   state = initialState,
   action: ActionType
 ): InitialStateType => {
-  console.log(action);
-
   switch (action.payload) {
     case type.INCREMENT:
       return {

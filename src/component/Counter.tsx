@@ -24,16 +24,14 @@ function Counter({ count, increment, decrement }: any) {
     </div>
   );
 }
-const mapStateToProps = (state: any) => {
+const mapStateToProps = (state: any, { number }: { number: number }) => {
   return {
     count: state.cake.count,
   };
 };
-const mapDispatchToProps = (dispatch: any) => {
+const mapDispatchToProps = (dispatch: any, { number }: { number: number }) => {
   return {
     increment: (parms: any) => {
-      console.log(parms);
-
       dispatch({ type: "", payload: "INCREMENT" });
     },
     decrement: () => dispatch({ type: "", payload: "DECREMENT" }),
